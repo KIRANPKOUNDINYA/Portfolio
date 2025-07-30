@@ -1,45 +1,38 @@
 import React from 'react';
-// import ReactTypingEffect from 'react-typing-effect';
-// import Tilt from 'react-parallax-tilt';
-// import profileImage from '../../assets/profile2.png';
+import { TypeAnimation } from 'react-type-animation';
+import profileImage from '../assets/kiran_profile_image.jpg';
 
 const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-8 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-4 md:mt-6 lg:mt-8"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
-        {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
-            Hi, I am
-          </h1>
-          {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Kiran P Koundinya
-          </h2>
-          {/* Skills Heading with Typing Effect */}
+      <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between">
+        {/* Left Side (Text content) */}
+        <div className="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
+          {/* Typing Animation */}
+          <TypeAnimation
+            sequence={[
+              'Hi, I am Kiran P Koundinya', // Text to type
+              1500,                          // Wait 1.5s after typing
+              '',                            // Clear text
+              500,                           // Wait 0.5s before retyping
+              'Hi, I am Kiran P Koundinya',
+            ]}
+            wrapper="h1"
+            speed={50}
+            repeat={Infinity}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight"
+          />
+
+          {/* Sub-heading */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
             <span className="text-white">I am a </span>
-            {/* <ReactTypingEffect
-              text={[
-                'Fullstack Developer',
-                'App Developer',
-                'UI/UX Designer',
-                'Coder',
-              ]}
-              speed={100}
-              eraseSpeed={50}
-              typingDelay={500}
-              eraseDelay={2000}
-              cursorRenderer={(cursor) => (
-                <span className="text-[#8245ec]">{cursor}</span>
-              )}
-            /> */}
+            <span className="text-[#8245ec]">Software Developer</span>
           </h3>
-          {/* About Me Paragraph */}
+
+          {/* Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
             I am a full-stack developer with over 2 years of experience in
             building scalable web applications. Skilled in both front-end and
@@ -47,7 +40,8 @@ const About = () => {
             modern technologies to create seamless user experiences and
             efficient solutions.
           </p>
-          {/* Resume Button */}
+
+          {/* CV Button */}
           <a
             href="https://drive.google.com/file/d/1_pLl2wjYVCU-wnqXIhjhYr0YC0SJXvwv/view?usp=sharing"
             target="_blank"
@@ -60,25 +54,17 @@ const About = () => {
           >
             DOWNLOAD CV
           </a>
-          
         </div>
-        {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          {/* <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          > */}
-            {/* <img
+
+        {/* Right Side (Image) */}
+        <div className="md:w-1/2 flex justify-center md:justify-end md:mb-0">
+          <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-[22rem] md:h-[22rem] rounded-full overflow-hidden border-4 border-[#8245ec] shadow-lg">
+            <img
               src={profileImage}
-              alt="Tarun Kaushik"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              alt="Kiran P Koundinya"
+              className="w-full h-full object-cover object-top rounded-full"
             />
-          </Tilt> */}
+          </div>
         </div>
       </div>
     </section>
@@ -86,5 +72,3 @@ const About = () => {
 };
 
 export default About;
-
-
