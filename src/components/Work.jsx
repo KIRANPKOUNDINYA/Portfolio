@@ -19,7 +19,7 @@ const Work = () => {
     >
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">PROJECTS</h2>
+        <h2 className="text-2xl font-bold text-white">PROJECTS</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
           A showcase of the projects I have worked on, highlighting my skills
@@ -28,7 +28,7 @@ const Work = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -43,7 +43,7 @@ const Work = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className=" font-bold text-white mb-2">
                 {project.title}
               </h3>
               <p className="text-gray-500 mb-4 pt-4 line-clamp-3">

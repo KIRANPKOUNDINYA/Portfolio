@@ -126,6 +126,7 @@ export const SkillsInfo = [
         "PHP",
         "SQL",
       ],
+      link: "https://your-live-project-link.com"
     },
   //   {
   //     id: 1,
