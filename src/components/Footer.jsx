@@ -21,6 +21,7 @@ const Footer = () => {
             { name: "Experience", id: "experience" },
             { name: "Projects", id: "projects" },
             { name: "Education", id: "education" },
+
           ].map((item, index) => (
             <button
               key={index}
@@ -35,7 +36,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center space-x-4 mt-6">
           {[
             { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kiran-p-koundinya-39a1b5375/" },
-            { icon: <FaEnvelope />, link: "mailto:your-email@example.com" },
+            { icon: <FaEnvelope />, link: "mailto:kiranpkoundinya@gmail.com" },
           ].map((item, index) => (
             <a
               key={index}

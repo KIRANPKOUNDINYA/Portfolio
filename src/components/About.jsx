@@ -12,19 +12,40 @@ const About = () => {
         {/* Left Side (Text content) */}
         <div className="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
           {/* Typing Animation */}
-          <TypeAnimation
-            sequence={[
-              "Hi, I am Kiran P Koundinya", // Text to type
-              1500, // Wait 1.5s after typing
-              "", // Clear text
-              500, // Wait 0.5s before retyping
-              "Hi, I am Kiran P Koundinya",
-            ]}
-            wrapper="h1"
-            speed={50}
-            repeat={Infinity}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight"
-          />
+
+          {/* Mobile View: Single Line */}
+          <div className="block lg:hidden">
+            <TypeAnimation
+              sequence={[
+                "Hi, I am Kiran P Koundinya",
+                1500,
+                "",
+                500,
+                "Hi, I am Kiran P Koundinya",
+              ]}
+              wrapper="h1"
+              speed={50}
+              repeat={Infinity}
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight"
+            />
+          </div>
+
+          {/* Desktop View: Two Lines with extra spacing */}
+          <div className="hidden lg:block">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 whitespace-pre-line min-h-[7rem] leading-[4rem]">
+              <TypeAnimation
+                sequence={[
+                  "Hi, I am\nKiran P Koundinya",
+                  1500,
+                  "",
+                  500,
+                  "Hi, I am\nKiran P Koundinya",
+                ]}
+                speed={50}
+                repeat={Infinity}
+              />
+            </h1>
+          </div>
 
           {/* Sub-heading */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
