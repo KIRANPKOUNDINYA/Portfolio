@@ -294,3 +294,33 @@ export const SkillsInfo = [
     //   webapp: "https://removeyourbg.netlify.app/",
     // },
   ];  
+
+  export const certifications = [
+  {
+    id: 1,
+    title: "ETHNOTECH ACADEMIC SOLUTIONS",
+    issuer: "ETHNOTECH",
+    date: "August 2024",
+    desc: "Java programming with mini project",
+    grade: "Pass with Distinction",
+    link: "https://drive.google.com/file/d/1tFhiqQADTS7n--OKWCRtqSSuBCdHBckV/view",  // <-- certificate URL
+  },
+  {
+    id: 2,
+    title: "Let's Pro",
+    issuer: "Let's Pro",
+    date: "Nov 2023 - Feb 2025",
+    desc: "Full Stack Java",
+    grade: "Completed",
+    link: "https://drive.google.com/file/d/1TnvBRF4ll9o_5L63_-AXqRH9JjU3ShA5/view",
+  },
+  {
+    id: 2,
+    title: "Edge Computing",
+    issuer: "NPTEL",
+    date: "Jan-March2025",
+    desc: "NPTL Online Certification on Edge Computing",
+    grade: "Completed",
+    link: "https://drive.google.com/file/d/1AufR_0zZ8zOEc4bozr2i4MjHOTNwepbc/view",
+  },
+];
